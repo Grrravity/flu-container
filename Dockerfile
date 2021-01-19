@@ -36,7 +36,7 @@ ENV PATH "$PATH:/home/developer/flutter/bin"
 RUN flutter channel beta
 
 # Upgrading flutter version
-RUN flutter update
+RUN flutter upgrade
 
 # Installing Chrome 
 RUN flutter config --enable-web
