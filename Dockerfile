@@ -30,10 +30,13 @@ RUN git clone https://github.com/flutter/flutter.git
 ENV PATH "$PATH:/home/developer/flutter/bin"
 
 # Selecting the version
-RUN flutter version 1.22.0-9.0.pre 
+#RUN flutter version 1.22.0-9.0.pre 
    
 # Switch to beta
-RUN flutter channel dev
+RUN flutter channel beta
+
+# Upgrading flutter version
+RUN flutter update
 
 # Installing Chrome 
 RUN flutter config --enable-web
