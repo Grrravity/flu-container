@@ -34,7 +34,7 @@ ENV PATH "$PATH:/home/developer/flutter/bin"
 #RUN flutter version 1.22.0-9.0.pre 
    
 # Switch to beta
-RUN flutter channel beta
+RUN flutter channel stable
 
 # Upgrading flutter version
 RUN flutter upgrade
