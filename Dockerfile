@@ -4,10 +4,10 @@ ENV TZ=Europe/Paris
    
 # Prerequisites
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-RUN apt update && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk wget
+RUN apt update -y && apt install -y curl git unzip xz-utils zip libglu1-mesa openjdk-8-jdk wget
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 RUN apt install -y ./google-chrome-stable_current_amd64.deb
-RUN apt install scrcpy
+RUN apt install -y scrcpy
 
 # Set up new user
 RUN useradd -ms /bin/bash -u 1004 developer
